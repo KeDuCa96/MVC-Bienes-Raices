@@ -1,0 +1,58 @@
+@use "sass:math";
+.alerta{
+    padding: .5rem;
+    text-align: center;
+    color: $blanco;
+    font-weight: $bold;
+    text-transform: uppercase;
+    margin: 1rem 0;
+
+    &.error{
+        background-color: $rojo;
+
+    }
+
+    &.exito{
+        background-color: $verde;
+    }
+}
+
+table.propiedades { /* Con esto indicamos que solo debe afectar a las tablas */
+
+    margin-top: 4rem;
+    width: 100%;
+    border-spacing: 0;
+
+    thead {
+        background-color:  $verde;
+
+        th {
+            color: $blanco;
+            padding: 2rem;
+        }
+    }
+
+    tbody{
+        td{
+           padding: 0 5rem 0 5rem;
+           margin: 5rem 0rem 5rem 0rem;
+           border-bottom: $grisOscuro 2px groove;
+        }
+    }
+
+    .imagen-tabla{
+        width: 10rem;
+    }
+}
+
+
+.imagen-admin{
+    width: 50rem;
+}
+
+
+.seccion-admin {
+    margin-top: math.div($separacion, 2);
+    margin-bottom: math.div($separacion, 2);
+    display: flex;
+}

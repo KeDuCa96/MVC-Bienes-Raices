@@ -1,0 +1,103 @@
+.derecha {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include tablet {
+    align-items: flex-end;
+  }
+
+  .dark-mode-boton {
+    width: 3rem;
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+    filter: invert(100%);
+    -webkit-filter: invert(100%);
+    }
+
+    &:hover{
+        cursor: pointer;
+    }
+
+}
+
+.barra {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 3rem;
+  @include tablet {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+
+  }
+}
+
+.navegacion {
+  visibility: hidden;
+  /*Estevisibilitylosustituimosparaeldisplay: none;
+  yaquelosdisplaynopodemosdarleanimaciones.*/opacity: 0;
+  /*Estaopacitycomosunombreloindicanossirveparadaropacidad*/height: 0;
+  transition: visibilty 0.3s ease-in-out, opacity 0.5s linear, height .5s linear;
+  -webkit-transition: visibilty 0.3s ease-in-out, opacity 0.5s linear, height .5s linear;
+  -moz-transition: visibilty 0.3s ease-in-out, opacity 0.5s linear, height .5s linear;
+  -ms-transition: visibilty 0.3s ease-in-out, opacity 0.5s linear, height .5s linear;
+  -o-transition: visibilty 0.3s ease-in-out, opacity 0.5s linear, height .5s linear;
+
+  @include tablet {
+    display: flex;
+    align-items: center;
+    visibility: visible;
+    opacity: 1;
+  }
+  a {
+    color: $blanco;
+    text-decoration: none;
+    font-size: 2.2rem;
+    display: block;
+    text-align: center;
+
+    &:hover {
+      color: $verde;
+      transition: ease 0.2s all;
+      font-size: 2.2rem;
+      -webkit-transition: ease 0.2s all;
+      -moz-transition: ease 0.2s all;
+      -ms-transition: ease 0.2s all;
+      -o-transition: ease 0.2s all;
+    }
+
+    @include tablet {
+      margin-right: 2rem;
+      font-size: 1.8rem;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+/* Menu hamburguesa */
+
+.mobile-menu {
+  /* Esta es otra forma de agregar un include */
+  @include tablet {
+    display: none;
+  }
+
+  img {
+    width: 5rem;
+  }
+}
+
+.mostrar {
+  visibility: visible; /* Los display no se pueden animar, pero sí le podemos elegir otras propiedades. Como sería el visibilty */
+  opacity: 1;
+  height: auto;
+
+  @include tablet {
+    flex-direction: row;
+  }
+}
