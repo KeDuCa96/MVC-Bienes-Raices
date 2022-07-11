@@ -1,5 +1,5 @@
 <?php
-namespace App;
+namespace Model;
 
 class Blog extends activeRecord {
     protected static $tabla = 'blog';
