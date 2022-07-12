@@ -7,7 +7,7 @@
     <!-- Validamos si la creación fue correcta para dar un mensaje al usuario. -->
     
     <?php 
-        if($resultado){
+        if($mensaje){
             $mensaje = mostrarNotificacion(intval($mensaje));
             if($mensaje){?>
                 <p class="alerta exito"><?php echo sani($mensaje);?> </p>

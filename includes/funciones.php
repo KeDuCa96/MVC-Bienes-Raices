@@ -3,7 +3,7 @@
 //? Definimos las constantes.
 define('TEMPLATES_URL', __DIR__ . '/templates');
 define('FUNCIONES_URL', 'funciones.php');
-define('CARPETA_IMAGENES', __DIR__ . '/../imagenes/');
+define('CARPETA_IMAGENES', $_SERVER['DOCUMENT_ROOT']. '/imagenes/');
 
 /* Usamos un poco de typescript para buenas practicas en el codigo */
 function incluirTemplate(string  $nombre, bool $inicio = false)
