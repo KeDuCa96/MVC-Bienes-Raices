@@ -29,9 +29,9 @@ Class Router {
 
         // Muestra una vista
     public function render($view, $datos = [] ){
-        
+
         foreach($datos as $key => $value){
-            $$key = $value; //$$ quiere decir variable de variable, mantiene el nombre, pero no pierde el valor 
+            $$key = $value; //$$ quiere decir variable de variable, mantiene el nombre, pero no pierde el valor. Una variable variable toma el valor de una variable y lo trata como el nombre de una variable.
         }
 
         ob_start(); // Inicia un almacenamiento en memoria
