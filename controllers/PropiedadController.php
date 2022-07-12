@@ -5,7 +5,9 @@ use MVC\Router;
 
 class PropiedadController {
     public static function index(Router $router){ // Pasamos el objeto router para no perder referencias.
-        $router->render('propiedades/admin');
+        $router->render('propiedades/admin', [
+            
+        ]);
     }
 
     public static function create(){
