@@ -29,6 +29,11 @@ Class Router {
 
         // Muestra una vista
     public function render($view){
+
+        ob_start(); // Inicia un almacenamiento en memoria
         include __DIR__ . "/views/$view.php";
+
+        $contenido = ob_get_clean(); // limpiamos la memoria
+        include __DIR__ . "/views/layaout.php";        
     }
 }
