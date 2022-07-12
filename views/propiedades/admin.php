@@ -51,5 +51,5 @@
             <?php endforeach; ?>
         </tbody>
     </table>
-    <a href="/admin/propiedades/crear.php" class="boton boton-verde">Nueva propiedad</a>
+    <a href="/propiedades/crear" class="boton boton-verde">Nueva propiedad</a>
 </main>

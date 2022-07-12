@@ -3,6 +3,7 @@
 namespace Controllers;
 use MVC\Router;
 use Model\Propiedad;
+use Model\Vendedores;
 
 class PropiedadController {
     public static function index(Router $router){ // Pasamos el objeto router para no perder referencias.
@@ -16,8 +17,15 @@ class PropiedadController {
         ]);
     }
 
-    public static function create(){
-        echo "Crear propiedad";
+    public static function create(Router $router){
+
+        $propiedad = new Propiedad;
+        $vendedor = Vendedores::all();
+
+        $router->render('propiedades/crear',[
+            'propiedad' => $propiedad,
+            'vendedores' => $vendedor
+        ]);
     }
 
     public static function update(){
