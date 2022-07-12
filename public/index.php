@@ -3,12 +3,13 @@
 require_once __DIR__ . '/../includes/app.php';
 
 use MVC\Router;
+use Controllers\PropiedadController;
 
 $router = new Router();
-
-$router->get('/admin', 'funcion_admin');
-$router->get('/nosotros', 'funcion_nosotros');
-$router->get('/blog', 'funcion_blog');
+    //Routs propiedades
+$router->get('/admin', [PropiedadController::class, 'index']);
+$router->get('/propiedades/crear', [PropiedadController::class, 'create']);
+$router->get('/propiedades/actualizar', [PropiedadController::class, 'update']);
 
 
 $router->comprobarRutas();
