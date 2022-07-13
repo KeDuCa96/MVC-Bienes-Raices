@@ -39,7 +39,7 @@
                     <td> <?php echo $propiedad->descripcion; ?> </td>
                     <td>
                         <!-- Utlizamos un form para el input de eliminar nos envie los datos via POST la información. -->
-                        <form method="POST" class="w-100">
+                        <form method="POST" class="w-100" action="/propiedades/eliminar">
                             <input type="hidden" name="id" value="<?php echo $propiedad->id; ?>"> 
                             <input type="hidden" name="tipo" value="propiedad"> 
                             <input type="submit" class="boton-rojo-block" value="Eliminar">

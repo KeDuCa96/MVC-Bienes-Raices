@@ -77,7 +77,7 @@ class PropiedadController
             //Setear la imagen
             if ($_FILES['propiedad']['tmp_name']['imagen']) {
                 // resize(cortar y dar nuevo tamaño) a la imagen con intervention
-                $image = Image::make($_FILES['propiedad']['tmp_name']['imagen'])->fit(800, 600); 
+                $image = Image::make($_FILES['propiedad']['tmp_name']['imagen'])->fit(800, 600);
                 $propiedad->setImagen($nombreImagen); // le pasamos el nombre el nombre al atributo de imagen
             }
 
@@ -101,5 +101,23 @@ class PropiedadController
             'vendedores' => $vendedor,
             'errores' => $errores
         ]);
+    }
+
+    public static function delete()
+    {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $id = $_POST['id'];
+            $id = filter_var($id, FILTER_VALIDATE_INT);
+
+            if ($id) {
+
+                $tipo = $_POST['tipo'];
+
+                if (validarTipoContenido($tipo)) {
+                    $propiedad = Propiedad::find($id);
+                    $propiedad->eliminar();
+                }
+            }
+        }
     }
 }
