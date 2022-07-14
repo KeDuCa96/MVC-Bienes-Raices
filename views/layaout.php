@@ -36,12 +36,12 @@ $autenticado = $_SESSION['login'] ?? null;
                     <img src="/build/img/dark-mode.svg" class="dark-mode-boton">
 
                     <nav class="navegacion">
-                        <a href="/nosotros.php">Nosotros</a>
-                        <a href="/anuncios.php">Anucios</a>
-                        <a href="/blog.php">Blog</a>
-                        <a href="/contacto.php">Contacto</a>
+                        <a href="/nosotros">Nosotros</a>
+                        <a href="/propiedades">Anucios</a>
+                        <a href="/blog">Blog</a>
+                        <a href="/contacto">Contacto</a>
                         <?php if ($autenticado) : ?>
-                            <a href="/cerrar-sesion.php">Cerrar sesión</a>
+                            <a href="/cerrar-sesion">Cerrar sesión</a>
                         <?php endif; ?>
                         <?php if (!$autenticado) : ?>
                             <a href="/login.php">Iniciar sesión</a>

@@ -69,29 +69,27 @@ class PropiedadController
         $vendedor = Vendedores::all();
         $errores = Propiedad::getErrores();
 
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            //Nueva instancia
-            $propiedad = new Propiedad($_POST['propiedad']);
-            //Hasheamos la imagen
-            $nombreImagen = md5(uniqid(rand(), true)) . " .jpg";
-            //Setear la imagen
-            if ($_FILES['propiedad']['tmp_name']['imagen']) {
-                // resize(cortar y dar nuevo tamaño) a la imagen con intervention
-                $image = Image::make($_FILES['propiedad']['tmp_name']['imagen'])->fit(800, 600);
-                $propiedad->setImagen($nombreImagen); // le pasamos el nombre el nombre al atributo de imagen
-            }
 
-            //Validar
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                //Asignamos los atributos
+            $args = $_POST['propiedad'];
+                //Sincronizamos
+            $propiedad->sincronizar($args);
+                //Validamos
             $errores = $propiedad->validar();
-            //Valiamos que no tengamos errores
+                //Hasheamos nombre imagen
+            $nombreImagen = md5(uniqid(rand(), true)) . ".jpg"; 
+                //Subimos archivos
+            if($_FILES['propiedad']['tmp_name']['imagen']) {
+                //resize(cortar y dar nuevo tamaño) a la imagen con intervention
+                $image = Image::make($_FILES['propiedad']['tmp_name']['imagen'])->fit(800, 600);
+                $propiedad->setImagen($nombreImagen);
+            }        //Verificamos que no tengamos errores
             if (empty($errores)) {
-                //creamos caperta para subir imagenes
-                if (!is_dir(CARPETA_IMAGENES)) {
-                    mkdir(CARPETA_IMAGENES);
+                if($_FILES['propiedad']['tmp_name']['imagen']) {
+                    $image->save(CARPETA_IMAGENES . $nombreImagen);
                 }
-                //Guardar imagen en servidor
-                $image->save(CARPETA_IMAGENES . $nombreImagen); // save es funcion de intervention
-                //Guardar base de datos
+                    //Guardamos
                 $propiedad->guardar();
             }
         }
