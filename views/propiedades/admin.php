@@ -2,8 +2,8 @@
 
     <h2>Propiedades</h2>
 <!--     <?php if ($_SESSION['rol'] === "1"): ?>
-        <?php incluirTemplate('panel-admin')?>
     <?php endif; ?> -->
+    <?php incluirTemplate('panel-admin')?>
     <!-- Validamos si la creación fue correcta para dar un mensaje al usuario. -->
     
     <?php 

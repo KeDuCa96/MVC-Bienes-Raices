@@ -7,7 +7,7 @@
         </div>
     <?php endforeach; ?>
 
-    <form method="POST" class="formulario" enctype="multipart/form-data">
+    <form method="POST" class="formulario" enctype="multipart/form-data" action="/propiedades/crear">
         <?php include __DIR__ . '/formulario.php'; ?>
         <input type="submit" value="Crear propiedad" class="boton boton-verde">
     </form>
