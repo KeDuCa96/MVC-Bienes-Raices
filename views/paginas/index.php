@@ -47,8 +47,8 @@
     <section class="blog">
         <h3>Nuestro blog</h3>
         <?php
-    $limite = 1;
-    include 'includes/templates/blog.php';
+    $limite = 2;
+    include 'listadoBlog.php';
     ?>
 
     </section>

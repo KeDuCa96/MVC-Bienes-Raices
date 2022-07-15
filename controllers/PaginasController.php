@@ -2,15 +2,18 @@
 namespace Controllers;
 
 use Model\Propiedad;
+use Model\Blog;
 use MVC\Router;
 
 class PaginasController {
     public static function index(Router $router){
         $propiedades = Propiedad::get(3);
+        $blog = Blog::get(2);
         $inicio = true;
 
         $router->render('paginas/index', [
             'propiedades' => $propiedades,
+            'blog' => $blog,
             'inicio' => $inicio
         ]);
     }
