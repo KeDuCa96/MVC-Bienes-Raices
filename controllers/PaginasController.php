@@ -3,6 +3,7 @@ namespace Controllers;
 
 use Model\Propiedad;
 use Model\Blog;
+use Model\Nosotros;
 use MVC\Router;
 
 class PaginasController {
@@ -17,8 +18,12 @@ class PaginasController {
             'inicio' => $inicio
         ]);
     }
-    public static function nosotros(){
-        echo 'nosotros';
+    public static function nosotros(Router $router){
+        $nosotros = Nosotros::all();
+
+        $router->render('paginas/nosotros',[
+            'nosotros' => $nosotros
+        ]);
     }
     public static function propiedades(){
         echo 'propiedades';
