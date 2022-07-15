@@ -3,6 +3,7 @@
 require_once __DIR__ . '/../includes/app.php';
 
 use Controllers\BlogController;
+use Controllers\NosotrosController;
 use MVC\Router;
 use Controllers\PropiedadController;
 use Controllers\VendedoresController;
@@ -31,6 +32,13 @@ $router->post('/blog/crear', [BlogController::class, 'create']);
 $router->get('/blog/actualizar', [BlogController::class, 'update']);
 $router->post('/blog/actualizar', [BlogController::class, 'update']);
 $router->post('/blog/eliminar', [BlogController::class, 'delete']);
+    //Routes Blog
+$router->get('/adminNosotros', [NosotrosController::class, 'read']);
+$router->get('/nosotros/crear', [NosotrosController::class, 'create']);
+$router->post('/nosotros/crear', [NosotrosController::class, 'create']);
+$router->get('/nosotros/actualizar', [NosotrosController::class, 'update']);
+$router->post('/nosotros/actualizar', [NosotrosController::class, 'update']);
+$router->post('/nosotros/eliminar', [NosotrosController::class, 'delete']);
 
 
        // Estaticas, libres o publicas

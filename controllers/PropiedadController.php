@@ -61,8 +61,7 @@ class PropiedadController
         ]);
     }
 
-    public static function update(Router $router)
-    {
+    public static function update(Router $router){
         $id = validarIDurl('/admin');
 
         $propiedad = Propiedad::find($id);

@@ -46,5 +46,5 @@
         <?php endforeach; ?>
         </tbody>
     </table>
-    <a href="/admin/blog/crear-blog.php" class="boton boton-verde">Nuevo Blog</a>
+    <a href="/blog/crear" class="boton boton-verde">Nuevo Blog</a>
 </main>

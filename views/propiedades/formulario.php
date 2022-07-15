@@ -13,9 +13,7 @@
 
     <!-- Mostramos imagen -->
     <?php if($propiedad->imagen){ ?>
-
         <img src="/imagenes/<?php echo $propiedad->imagen ?>" class="imagen-admin">
-
     <?php } ?>
 
     <label for="descripcion">Descripcion:</label>
