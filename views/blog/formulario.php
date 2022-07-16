@@ -15,7 +15,7 @@
     <?php } ?>
 
     <label for="descripcion">Descripcion:</label>
-    <textarea id="descripcionBlog" name="blog[descripcionBlog]" maxlength="100"><?php echo sani($blog->descripcionBlog); ?></textarea>
+    <textarea id="descripcionBlog" name="blog[descripcionBlog]" maxlength="500"><?php echo sani($blog->descripcionBlog); ?></textarea>
     <p id="contador">0/100</p>
 
     <fieldset>
@@ -28,4 +28,4 @@
                 <option <?php echo $blog->vendedorid === $vendedor->id ? 'selected' : '' ?> value="<?php echo sani($vendedor->id) ?>"> <?php echo sani($vendedor->nombre) . " " . sani($vendedor->apellido); ?> </option>
             <?php } ?>
         </select>
-    </fieldset>
+</fieldset>
