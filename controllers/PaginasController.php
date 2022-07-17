@@ -59,6 +59,10 @@ class PaginasController {
     }
 
     public static function contacto(Router $router){
+        
+        $respuestas = $_POST['contacto'];
+
+        //debuguear($respuestas);
 
         if($_SERVER['REQUEST_METHOD'] === 'POST'){
             // Crear una instancia de PHPmailer
@@ -79,7 +83,18 @@ class PaginasController {
         $mail->isHTML(true);
         $mail->CharSet = 'UTF-8';
             // Definir contenido
-        $contenido = '<html><p>Tienes un nuevo mensaje</p></html>';
+        $contenido = '<html>';
+        $contenido .= '<p>Tienes un nuevo mensaje</p>';
+        $contenido .= '<p>Nombre: '. $respuestas['nombre'] .'</p>';
+        $contenido .= '<p>Email: '. $respuestas['email'] .'</p>';
+        $contenido .= '<p>Telefono: '. $respuestas['telefono'] .'</p>';
+        $contenido .= '<p>Mensaje: '. $respuestas['mensaje'] .'</p>';
+        $contenido .= '<p>Tipo de servicio: '. $respuestas['tipo'] .'</p>';
+        $contenido .= '<p>Precio o presupuesto: $'. $respuestas['precio'] .'</p>';
+        $contenido .= '<p>Contactar por: '. $respuestas['contacto'] .'</p>';
+        $contenido .= '<p>Fecha: '. $respuestas['fecha'] .'</p>';
+        $contenido .= '<p>Hora: '. $respuestas['hora'] .'</p>';
+        $contenido .= '</html>';
         $mail->Body = $contenido;
         $mail->AltBody = 'Esto es texto alternativo sin HTML';
             // Enviar el email

@@ -13,29 +13,29 @@
         <fieldset>
             <legend>Información Personal</legend>
                 <label for="Nombre"">Nombre</label>
-                <input type=" text" placeholder="Tu nombre" id="Nombre" name="contacto[nombre]" required>
+                <input type=" text" placeholder="Tu nombre" id="Nombre" name="contacto[nombre]" >
 
                 <label for="E-mail"">E-mail</label>
-                <input type=" email" placeholder="Tu Email" id="E-mail" name="contacto[email]" required>
+                <input type=" email" placeholder="Tu Email" id="E-mail" name="contacto[email]" >
 
                 <label for="Telefono"">Teléfono</label>
-                <input type=" tel" placeholder="Número de contacto" id="Telefono" name="contacto[telefono]" required>
+                <input type=" tel" placeholder="Número de contacto" id="Telefono" name="contacto[telefono]" >
 
                 <label for="Mensaje">Mensaje:</label>
-                <textarea id=" Mensaje" name="contacto[mensaje]" required></textarea>
+                <textarea id=" Mensaje" name="contacto[mensaje]" ></textarea>
         </fieldset>
 
         <fieldset>
 
             <legend>Información sobre la propiedad</legend>
             <label for="opciones">Vende o compra</label>
-            <select name="contacto[tipo]" id="opciones" required>
+            <select name="contacto[tipo]" id="opciones" >
                 <option value="" disabled selected>---Seleccione---</option> /
                 <option value="Compra">Compra</option>
                 <option value="Venta">Venta</option>
             </select>
             <label for="presupuesto">Precio o presupuesto</label>
-            <input type="number" placeholder="Precio o presupuesto" id="presupuesto" name="contacto[precio]" required>
+            <input type="number" placeholder="Precio o presupuesto" id="presupuesto" name="contacto[precio]" >
 
         </fieldset>
 
@@ -45,9 +45,9 @@
             <p>¿Cómo desea ser contactado?</p>
             <div class="forma-contacto">
                 <label for="contactar-telefono">Teléfono</label>
-                <input type="radio" name="contacto[contacto]" value="telefono" checked id="contactar-telefono" required> <!-- name es importante porque es la forma con que podremos seleccionar desde php -->
+                <input type="radio" name="contacto[contacto]" value="telefono" checked id="contactar-telefono" > <!-- name es importante porque es la forma con que podremos seleccionar desde php -->
                 <label for="contactar-email">E-mail</label>
-                <input type="radio" name="contacto[contacto]" value="email" checked id="contactar-email" required>
+                <input type="radio" name="contacto[contacto]" value="email" checked id="contactar-email" >
             </div>
 
             <p>Si eligió teléfono, elija la fecha y la hora</p>
