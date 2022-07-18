@@ -62,7 +62,7 @@ class PaginasController {
         
         $respuestas = $_POST['contacto'];
 
-        //debuguear($respuestas);
+        debuguear($respuestas);
 
         if($_SERVER['REQUEST_METHOD'] === 'POST'){
             // Crear una instancia de PHPmailer

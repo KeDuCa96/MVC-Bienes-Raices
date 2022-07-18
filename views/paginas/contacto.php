@@ -15,12 +15,6 @@
                 <label for="Nombre"">Nombre</label>
                 <input type=" text" placeholder="Tu nombre" id="Nombre" name="contacto[nombre]" >
 
-                <label for="E-mail"">E-mail</label>
-                <input type=" email" placeholder="Tu Email" id="E-mail" name="contacto[email]" >
-
-                <label for="Telefono"">Teléfono</label>
-                <input type=" tel" placeholder="Número de contacto" id="Telefono" name="contacto[telefono]" >
-
                 <label for="Mensaje">Mensaje:</label>
                 <textarea id=" Mensaje" name="contacto[mensaje]" ></textarea>
         </fieldset>
@@ -50,13 +44,9 @@
                 <input type="radio" name="contacto[contacto]" value="email" checked id="contactar-email" >
             </div>
 
-            <p>Si eligió teléfono, elija la fecha y la hora</p>
+            <div id="contacto"></div>
 
-            <label for="fecha">Fecha:</label>
-            <input type="date" id="fecha" name="contacto[fecha]">
 
-            <label for="hora">Hora:</label>
-            <input type="time" id="hora" min="09:00" max="18:00" name="contacto[hora]"> <!-- Con el min y max dpodemos decirle al usuario o cliente las horas disponibles para contactar -->
         </fieldset>
 
         <input type="submit" value="Enviar" class="boton-verde">
