@@ -28,9 +28,9 @@
         <?php foreach($blog as $blog): ?>
             <tr>
                 <td> <?php echo $blog->id; ?> </td>
-                <td> <?php echo $blog->tituloBlog; ?> </td>
+                <td> <?php echo $blog->titulo; ?> </td>
                 <td> <img src="/imagenes/<?php echo $blog->imagen; ?>" alt="imagen blog" class="imagen-tabla"> </td> 
-                <td> <?php echo $blog->descripcionBlog; ?> </td>
+                <td> <?php echo $blog->descripcion; ?> </td>
                 <!-- <td> <?php echo $blog->nombre." ".$blog->apellido; ?> </td> -->
 
                 <td>

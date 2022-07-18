@@ -12,5 +12,5 @@
         <input type="submit" value="Crear Blog" class="boton boton-verde">
     </form>
     
-    <a href="/admin" class="boton boton-amarillo">Volver</a>
+    <a href="/adminblog" class="boton boton-amarillo">Volver</a>
 </main>

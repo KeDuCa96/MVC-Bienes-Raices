@@ -2,20 +2,18 @@
     <legend>Información General</legend>
 
     <label for="titulo">Titulo:</label>
-    <input type="text" id="tituloBlog" name="blog[tituloBlog]" placeholder="Titulo blog" value="<?php echo sani($blog->tituloBlog); ?>">
+    <input type="text" id="titulo" name="blog[titulo]" placeholder="Titulo blog" value="<?php echo sani($blog->titulo); ?>">
 
     <label for="imagen">Imagen:</label>
     <input type="file" id="imagen" name="blog[imagen]" accept="image/jpeg, image/png">
 
     <!-- Mostramos imagen -->
     <?php if($blog->imagen){ ?>
-
         <img src="/imagenes/<?php echo $blog->imagen ?>" class="imagen-admin">
-
     <?php } ?>
 
     <label for="descripcion">Descripcion:</label>
-    <textarea id="descripcionBlog" name="blog[descripcionBlog]" maxlength="500"><?php echo sani($blog->descripcionBlog); ?></textarea>
+    <textarea id="descripcion" name="blog[descripcion]" maxlength="500"><?php echo sani($blog->descripcion); ?></textarea>
     <p id="contador">0/100</p>
 
     <fieldset>

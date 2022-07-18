@@ -9,9 +9,9 @@
 
         <div class="texto-nosotros">
             <blockquote>
-                <?php echo $nosotros->tituloNosotros ?>
+                <?php echo $nosotros->titulo ?>
             </blockquote>
-            <p> <?php echo $nosotros->descripcionNosotros ?> </p>
+            <p> <?php echo $nosotros->descripcion ?> </p>
         </div>
     </div>
 <?php } ?>

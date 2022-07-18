@@ -3,34 +3,34 @@ namespace Model;
 
 class Blog extends activeRecord {
     protected static $tabla = 'blog';
-    protected static $columnasDB = ['id', 'imagen', 'tituloBlog', 'creadoBlog', 'vendedorid', 'descripcionBlog'];
+    protected static $columnasDB = ['id', 'imagen', 'titulo', 'creado', 'vendedorid', 'descripcion'];
 
      //Atributos
     public $id;
     public $imagen;
-    public $tituloBlog;
-    public $creadoBlog;
+    public $titulo;
+    public $creado;
     public $vendedorid;
-    public $descripcionBlog;
+    public $descripcion;
 
      //Constructor
     public function __construct($args = []){
         $this->id = $args['id'] ?? null;
         $this->imagen = $args['imagen'] ?? '';
-        $this->tituloBlog = $args['tituloBlog'] ?? '';
-        $this->creadoBlog = date('Y/m/d');
+        $this->titulo = $args['titulo'] ?? '';
+        $this->creado = date('Y/m/d');
         $this->vendedorid = $args['vendedorid'] ?? '';
-        $this->descripcionBlog = $args['descripcionBlog'] ?? '';
+        $this->descripcion = $args['descripcion'] ?? '';
     }
 
     public function validar(){
-        if(!$this->tituloBlog){
+        if(!$this->titulo){
             self::$errores[] = "Por favor ingrese un titulo";
         }
         if(!$this->imagen){
             self::$errores[] = "Por favor ingrese una imagen";
         }
-        if(!$this->descripcionBlog){
+        if(!$this->descripcion){
             self::$errores[] = "Por favor ingrese una descripcion";
         }
         if (!$this->vendedorid) {

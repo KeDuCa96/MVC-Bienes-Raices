@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function(){
     
     borraMensaje();
 
-    mostrarContrasena();
+    //mostrarContrasena();
 });
 
 function darkMode(){
@@ -56,8 +56,11 @@ function darkMode(){
 
 function eventListeners() {
     const mobileMenu = document.querySelector('.mobile-menu');
-
     mobileMenu.addEventListener('click', navegacionResponsive);
+
+        // Muestra campos adicionales
+    const metodoContacto = document.querySelectorAll('input[name="contacto[contacto]"]'); //Seleccionamos todos los input que tengan el name contacto.
+    metodoContacto.forEach(input => input.addEventListener('click', mostrarMetodosContacto));
 }
 
 function navegacionResponsive(){
@@ -77,12 +80,14 @@ function contadorDeCaracteres() {
     const descripcion = document.getElementById('descripcion');
     let contador = document.getElementById('contador');
 
-    descripcion.addEventListener('input', function (e) {
-        const target = e.target;
-        const longitudMax = target.getAttribute('maxlength');
-        const longitudActu = target.value.length;
-        contador.innerHTML = `${longitudActu}/${longitudMax}`;
-    })
+    if(descripcion){
+        descripcion.addEventListener('input', function (e) {
+            const target = e.target;
+            const longitudMax = target.getAttribute('maxlength');
+            const longitudActu = target.value.length;
+            contador.innerHTML = `${longitudActu}/${longitudMax}`;
+        })
+    }
 }
 
 /* Borrar aletar o errores cada cierto tiempo */
@@ -111,10 +116,14 @@ function borraMensaje() {
 }
 
 function mostrarContrasena(){
-    var tipo = document.getElementById('password');
+    const tipo = document.getElementById('password');
     if(tipo.type == "password"){
         tipo.type = "text";
     }else{
         tipo.type = "password";
     }
+}
+
+function mostrarMetodosContacto(){
+    console.log('mostrando');
 }

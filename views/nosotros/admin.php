@@ -22,9 +22,9 @@
         <tbody>
             <?php foreach ($nosotros as $nosotros) : ?>
                 <tr>
-                    <td> <?php echo $nosotros->tituloNosotros; ?> </td>
+                    <td> <?php echo $nosotros->titulo; ?> </td>
                     <td> <img src="/imagenes/<?php echo $nosotros->imagen; ?>" alt="imagen Nosotros" class="imagen-tabla"> </td>
-                    <td> <?php echo $nosotros->descripcionNosotros; ?> </td>
+                    <td> <?php echo $nosotros->descripcion; ?> </td>
                     <td>
 
                         <form method="POST" class="w-100" action="/nosotros/eliminar">
