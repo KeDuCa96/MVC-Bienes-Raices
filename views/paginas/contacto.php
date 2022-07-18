@@ -1,6 +1,11 @@
 <main class="contenedor seccion">
     <h1>Contacto</h1>
 
+    <?php
+    if ($mensaje) { ?>
+        <p class="alerta exito"><?php echo $mensaje; ?> </p>
+    <?php }; ?>
+
     <picture>
         <source srcset="build/img/destacada3.webp" type="img/webp">
         <source srcset="build/img/destacada3.jpg" type="img/jepg">
@@ -13,23 +18,23 @@
         <fieldset>
             <legend>Información Personal</legend>
                 <label for="Nombre"">Nombre</label>
-                <input type=" text" placeholder="Tu nombre" id="Nombre" name="contacto[nombre]" >
+                <input type=" text" placeholder="Tu nombre" id="Nombre" name="contacto[nombre]" required>
 
                 <label for="Mensaje">Mensaje:</label>
-                <textarea id=" Mensaje" name="contacto[mensaje]" ></textarea>
+                <textarea id=" Mensaje" name="contacto[mensaje]" required></textarea>
         </fieldset>
 
         <fieldset>
 
             <legend>Información sobre la propiedad</legend>
             <label for="opciones">Vende o compra</label>
-            <select name="contacto[tipo]" id="opciones" >
+            <select name="contacto[tipo]" id="opciones" required>
                 <option value="" disabled selected>---Seleccione---</option> /
                 <option value="Compra">Compra</option>
                 <option value="Venta">Venta</option>
             </select>
             <label for="presupuesto">Precio o presupuesto</label>
-            <input type="number" placeholder="Precio o presupuesto" id="presupuesto" name="contacto[precio]" >
+            <input type="number" placeholder="Precio o presupuesto" id="presupuesto" name="contacto[precio]" required>
 
         </fieldset>
 
@@ -39,9 +44,9 @@
             <p>¿Cómo desea ser contactado?</p>
             <div class="forma-contacto">
                 <label for="contactar-telefono">Teléfono</label>
-                <input type="radio" name="contacto[contacto]" value="telefono" checked id="contactar-telefono" > <!-- name es importante porque es la forma con que podremos seleccionar desde php -->
+                <input type="radio" name="contacto[contacto]" value="telefono" id="contactar-telefono" required>
                 <label for="contactar-email">E-mail</label>
-                <input type="radio" name="contacto[contacto]" value="email" checked id="contactar-email" >
+                <input type="radio" name="contacto[contacto]" value="email" id="contactar-email" required>
             </div>
 
             <div id="contacto"></div>
