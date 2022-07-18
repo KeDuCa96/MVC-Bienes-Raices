@@ -43,9 +43,6 @@ $autenticado = $_SESSION['login'] ?? null;
                         <?php if ($autenticado) : ?>
                             <a href="/logout">Cerrar sesión</a>
                         <?php endif; ?>
-                        <?php if (!$autenticado) : ?>
-                            <a href="/login">Iniciar sesión</a>
-                        <?php endif; ?>
                     </nav>
                 </div>
             </div> <!-- Cierre da barra -->
