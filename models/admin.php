@@ -55,4 +55,13 @@ class Admin extends activeRecord {
 
         return $autenticado;
     }
+
+    public function autenticar(){
+        session_start();
+            //completamos arreglo
+        $_SESSION['usuario'] = $this->email;
+        $_SESSION['login'] = true;
+
+        header('Location: /admin');
+    }
 }

@@ -41,10 +41,10 @@ $autenticado = $_SESSION['login'] ?? null;
                         <a href="/blog">Blog</a>
                         <a href="/contacto">Contacto</a>
                         <?php if ($autenticado) : ?>
-                            <a href="/cerrar-sesion">Cerrar sesión</a>
+                            <a href="/logout">Cerrar sesión</a>
                         <?php endif; ?>
                         <?php if (!$autenticado) : ?>
-                            <a href="/login.php">Iniciar sesión</a>
+                            <a href="/login">Iniciar sesión</a>
                         <?php endif; ?>
                     </nav>
                 </div>
