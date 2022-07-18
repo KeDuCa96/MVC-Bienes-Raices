@@ -10,8 +10,8 @@
     <form method="POST" class="formulario" enctype="multipart/form-data">
         <?php include __DIR__ . '/formulario.php'; ?>
         <input type="submit" value="Actualizar propiedad" class="boton boton-verde">
-        <a href="/admin" class="boton boton-amarillo">Volver</a>
     </form>
+    <a href="/admin" class="boton boton-amarillo">Volver</a>
 
 
 </main>

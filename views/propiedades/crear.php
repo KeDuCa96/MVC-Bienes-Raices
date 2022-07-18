@@ -11,4 +11,5 @@
         <?php include __DIR__ . '/formulario.php'; ?>
         <input type="submit" value="Crear propiedad" class="boton boton-verde">
     </form>
+    <a href="/admin" class="boton boton-amarillo">Volver</a>
 </main>

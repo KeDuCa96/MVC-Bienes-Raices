@@ -9,12 +9,8 @@
 
     <!-- Creamos el formulario para poder CREAR-->
     <form method="POST" class="formulario" enctype="multipart/form-data">
-        <fieldset>
-            <?php include __DIR__ . '/formulario.php'; ?>
+        <?php include __DIR__ . '/formulario.php'; ?>
         <input type="submit" value="Actualizar Blog" class="boton boton-verde">
-
     </form>
-
-    <a href="/admin" class="boton boton-amarillo">Volver</a>
-
+    <a href="/adminblog" class="boton boton-amarillo">Volver</a>
 </main>

@@ -11,5 +11,5 @@
         <?php include __DIR__ . '/formulario.php'; ?>
         <input type="submit" value="Crear Vendedor" class="boton boton-verde">
     </form>
-    <a href="/vendedores" class="boton boton-verde">Volver</a>
+    <a href="/vendedores" class="boton boton-amarillo">Volver</a>
 </main>
