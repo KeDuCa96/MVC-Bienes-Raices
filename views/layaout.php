@@ -2,7 +2,7 @@
 if (!isset($_SESSION)) {
     session_start();
 }
-if(!isset($inicio)){
+if (!isset($inicio)) {
     $inicio = false;
 }
 $autenticado = $_SESSION['login'] ?? null;
@@ -35,9 +35,9 @@ $autenticado = $_SESSION['login'] ?? null;
                 <div class="derecha">
                     <img src="/build/img/dark-mode.svg" class="dark-mode-boton">
 
-                    <nav class="navegacion">
+                    <nav data-cy="navegacion-header" class="navegacion">
                         <a href="/nosotros">Nosotros</a>
-                        <a href="/propiedades">Anucios</a>
+                        <a href="/propiedades">Propiedades</a>
                         <a href="/blog">Blog</a>
                         <a href="/contacto">Contacto</a>
                         <?php if ($autenticado) : ?>
@@ -46,28 +46,28 @@ $autenticado = $_SESSION['login'] ?? null;
                     </nav>
                 </div>
             </div> <!-- Cierre da barra -->
-            <?php if ($inicio) : ?>
-                <h1>Venta de Casas y Departamentos de lujo</h1>
-            <?php endif; ?>
+
+            <?php echo $inicio ? "<h1 data-cy='heading-sitio'>Venta de Casas y Departamentos de lujo</h1>" : ''; ?>
+
         </div>
     </header>
 
-        <?php echo $contenido ?>
+    <?php echo $contenido ?>
 
     <footer class="footer seccion">
-    <div class="contenedor contenedor-footer">
-        <nav class="navegacion">
-            <a href="/nosotros.php">Nosotros</a>
-            <a href="/anuncio.php">Anucios</a>
-            <a href="/blog.php">Blog</a>
-            <a href="/contacto.php">Contacto</a>
-        </nav>
-    </div>
+        <div class="contenedor contenedor-footer">
+            <nav data-cy="navegacion-footer" class="navegacion">
+                <a href="/nosotros">Nosotros</a>
+                <a href="/propiedades">Propiedades</a>
+                <a href="/blog">Blog</a>
+                <a href="/contacto">Contacto</a>
+            </nav>
+        </div>
 
-    <p class="copyright">Todos los derechos reservados <?php echo date('Y') ?> &copy;</p>
-</footer>
+        <p data-cy="copyright" class="copyright">Todos los derechos reservados <?php echo date('Y') ?> &copy;</p>
+    </footer>
 
-<script src="/build/js/bundle.min.js"></script>
+    <script src="/build/js/bundle.min.js"></script>
 </body>
 
 </html>

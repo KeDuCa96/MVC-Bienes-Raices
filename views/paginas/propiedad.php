@@ -1,5 +1,5 @@
 <main class="contenedor seccion contenido-centrado">
-    <h1> <?php echo $propiedades->titulo; ?> </h1>
+    <h1 data-cy="titulo-propiedad"> <?php echo $propiedades->titulo; ?> </h1>
 
     <img loading="lazy" src="/imagenes/<?php echo $propiedades->imagen; ?>" alt="anuncio">
 

@@ -4,12 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "cypress open --e2e --browser chrome"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "cssnano": "^4.1.10",
+    "cypress": "^10.3.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "8.0.0",
     "gulp-cache": "^1.1.3",

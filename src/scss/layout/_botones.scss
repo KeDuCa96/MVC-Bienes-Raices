@@ -1,27 +1,58 @@
 .boton-amarillo{
-    @include boton($amarillo, inline-block);
+    @include boton($amarillo,inline-block);
+    border-radius: 5rem ;
+    -webkit-border-radius: 5rem ;
+    -moz-border-radius: 5rem ;
+    -ms-border-radius: 5rem ;
+    -o-border-radius: 5rem ;
 }
 
 .boton-amarillo-block{
     @include boton($amarillo, block);
+    border-radius: 5rem ;
+    -webkit-border-radius: 5rem ;
+    -moz-border-radius: 5rem ;
+    -ms-border-radius: 5rem ;
+    -o-border-radius: 5rem ;
 }
 
 .boton-verde{
     @include boton($verde, inline-block);
+    border-radius: 5rem ;
+    -webkit-border-radius: 5rem ;
+    -moz-border-radius: 5rem ;
+    -ms-border-radius: 5rem ;
+    -o-border-radius: 5rem ;
 }
 
 .boton-rojo-block{
     @include boton($rojo, block);
+    border-radius: 5rem ;
+    -webkit-border-radius: 5rem ;
+    -moz-border-radius: 5rem ;
+    -ms-border-radius: 5rem ;
+    -o-border-radius: 5rem ;
     width: 100%;
 }
 
 .boton-verde-block{
     @include boton($verde, block);
+    border-radius: 5rem ;
+    -webkit-border-radius: 5rem ;
+    -moz-border-radius: 5rem ;
+    -ms-border-radius: 5rem ;
+    -o-border-radius: 5rem ;
 }
 
 .boton-admin{
+    border-radius: 5rem ;
+    -webkit-border-radius: 5rem ;
+    -moz-border-radius: 5rem ;
+    -ms-border-radius: 5rem ;
+    -o-border-radius: 5rem ;
     @include boton($grisOscuro, inline-block);
     &:hover{
         color: $amarillo;
     }
 }
+

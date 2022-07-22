@@ -1,11 +1,11 @@
-<div class="contenedor-anuncios">
+<div class="contenedor-anuncios" data-cy="contenedor-anuncios">
     <?php foreach ($propiedades as $propiedad){ ?>
 
-        <div class="anuncio">
+        <div class="anuncio" data-cy="anuncio">
 
-            <img loading="lazy" src="/imagenes/<?php echo $propiedad->imagen; ?>" alt="anuncio">
+            <img data-cy="imagen-propiedad" loading="lazy" src="/imagenes/<?php echo $propiedad->imagen; ?>" alt="anuncio">
 
-            <div class="contenido-anuncio">
+            <div class="contenido-anuncio" data-cy="contenido-anuncio">
                 <h3> <?php echo $propiedad->titulo; ?> </h3>
                 <p> <?php echo limitar_cadena($propiedad->descripcion, 50, "..."); ?> </p>
                 <p class="precio"> $ <?php echo number_format($propiedad->precio); ?> </p>
@@ -25,9 +25,7 @@
                     </li>
                 </ul>
 
-                <a href="/propiedad?id=<?php echo $propiedad->id; ?>" class="boton-amarillo-block">
-                    VER PROPIEDAD
-                </a>
+                <a data-cy="enlace-propiedad" href="/propiedad?id=<?php echo $propiedad->id; ?>" class="boton-amarillo-block">Ver Propiedad</a>
 
             </div> <!-- .contenido-anuncion -->
         </div> <!-- anucion -->
