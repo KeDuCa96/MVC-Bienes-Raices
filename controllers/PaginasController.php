@@ -69,9 +69,9 @@ class PaginasController {
                 // Configurar SMTP (protocolo para el envio de email)
             $mail->isSMTP();
             $mail->Host = 'smtp.mailtrap.io';
-            $mail->SMTPAuth = TRUE;
-            $mail->Username = '0426be6505364d';
-            $mail->Password = 'cc690a3a425b90';
+            $mail->SMTPAuth = true;
+            $mail->Username = '743717c52fb879';
+            $mail->Password = 'c54e1f1326a26b';
             $mail->SMTPSecure = 'tls';  //(Transport Layer Security, seguridad de la capa de transporte). También se puede usar SSL. 
             $mail->Port = 2525;
                 // Configurar contenido del mail
